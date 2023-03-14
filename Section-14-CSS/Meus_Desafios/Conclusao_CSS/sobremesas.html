@@ -1,0 +1,127 @@
+<head>
+    <style>
+      @font-face {
+                font-family: American Capitan ;
+                src: url(American\ Captain.ttf);
+      }
+        *{
+            color: rgb(233, 226, 16);
+        }
+
+        h1 {
+          font-size: 50px;
+          margin-left: 60px;
+          margin-top: 35px;
+          font-family: American Capitan;
+          letter-spacing: 15px;
+        }
+
+        div.sobremesa {
+          display: flex;
+          flex-wrap: wrap;
+          align-content: space-between 5px ;
+        }
+        
+        div.sobre {
+            display: block;
+            padding: 0px;
+            width: 300px;
+            height: 450px;
+            margin: 56px;
+            border-radius: 45px 45px 45px 45px;
+            background-color: black;
+            box-shadow: 1px 1px 20px #ffa500;
+        }
+
+        .sobre-info1 {
+            margin: 10px;
+            font-size: 14px;
+            font-family: American Capitan;
+            margin-top: 108px;
+            letter-spacing: 2px;
+        }
+
+        .sobre-info2 {
+            margin: 10px;
+            font-size: 14px;
+            font-family: American Capitan;
+            margin-top: 80px;
+            letter-spacing: 2px;
+        }
+
+        button.botao-sobre {
+          background-color: red;
+          color: white;
+          border-radius: 360px;
+          font-size: 30px;
+          font-family: 'American Capitan', sans-serif;
+          width: 49px;
+          height: 48px;
+          }
+
+        .preco-sobre {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 5px;
+          justify-items: baseline;
+          margin-top: 60px;
+        }
+
+        .img-card-sobre1 {
+          height: 100px;
+          width: 145px;
+          margin-left: 71px;
+          margin-top: 40px;
+        }
+
+        .img-card-sobre2 {
+          height: 150px;
+          width: 163px;
+          margin-left: 73px;
+          margin-top: 21px;
+        }
+
+        span {
+          font-size: 45px ;
+          font-family: American Capitan;
+          margin-right: 10px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1> - SOBREMESAS </h1>
+
+
+<div class="sobremesa">
+   <div class="sobre">
+      <img class="img-card-sobre1" src="pudim-removebg-preview.png" alt="">
+      <div class="sobre-info1">
+        <h4>Pudim de Leite</h4>
+        <p>Deliciosa sobremesa tradicional com calda de caramelo</p>
+      </div> 
+      <div class="preco-sobre">
+        <span>R$6,00</span>
+        <button class="botao-sobre"> + </button>
+      </div>
+   </div>
+
+   <div class="sobre">
+      <img class="img-card-sobre2" src="tortadelimao-removebg-preview.png" alt="smashsalada">
+      <div class="sobre-info2">
+        <h4>Mousse de Limao </h4>
+        <p>Deliciosa sobremesa leve e cremosa, com raspas de limao</p>
+      </div> 
+      <div class="preco-sobre">
+        <span> R$6,00</span>
+        <button class="botao-sobre"> + </button>
+      </div>
+   </div>
+
+</div>
+
+</body>

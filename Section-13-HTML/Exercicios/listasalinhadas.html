@@ -1,0 +1,46 @@
+<h1> PROJETO </h1>
+<UL class="tree">
+    <li>
+        <span lb-wm-folder> Backend </span>
+        <ul>
+            <li>
+             <span lb-wm-folder> app</span>  
+             <ul>
+                <li>produto.js</li>
+                <li>usuario.js</li>
+                <li>venda.js</li>
+             </ul>  
+            </li>
+            <li>
+               <span lb-wm-folder> config </span> 
+            </li>
+        </ul>
+    </li>
+    <li>
+        <span lb-wm-folder> Frontend </span>
+        <ul>
+            <li>
+                <span lb-wm-folder> Public </span> 
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</UL>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll ('[lb-wm-folder]').forEach(folder=> {
+        folder.onclick = function(e) {
+            const ul = folder.nextElementSibling
+            const d = ul.style.display
+            ul.style.display = d === 'none'? 'block' : 'none'
+         }
+    })
+</script>
+
+
+<!-- Colocando java script pra deixar com estilo de pastas -->

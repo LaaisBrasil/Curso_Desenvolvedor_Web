@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox #01</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+            margin: 5px;
+
+        }
+
+        .big {
+            font-size: 1.5em;
+
+        }
+        
+        .flex-container {
+            display: flex;
+            flex-direction: column; /* coluna */
+            flex-direction: column-reverse; /* coluna de tras pra frente */
+            flex-direction: row-reverse; /*coluna de tras pra frente da direita pra esquerda */
+            flex-direction: row; /* coluna */
+            width: 50%;
+            flex-wrap: wrap; /* quebra pra proxima linha quando der overflow */
+            flex-wrap: wrap-reverse; /* quebra a linha quando der overflow de tras pr frente */
+            flex-flow: row wrap;
+            height: 200px;
+            flex-flow: column-reverse wrap; /* começa de cima pra baixo */
+            flex-flow: row wrap; 
+
+            justify-content: flex-start; /* comeca pela esquerda */
+            justify-content: flex-end; /*recomeça pela direita*/
+            justify-content: center; /* centralizar */
+            justify-content: space-around; /* em volta dos elementos tera o mesmo espaço e da margem tbm*/
+            flex-direction: row-reverse;
+            justify-content: space-between; /* apenas entre os elementos */
+
+            /* Cross axis */
+
+            height: 400px;
+            align-items: stretch;
+            align-items: baseline; /* alinha pela linha de base dos elementos - tamanho da font é relevante */
+            align-items: flex-start; 
+            align-items: flex-end;
+            align-items: center;
+
+            /* mais de uma linha */
+            align-content: flex-start; /* todas as linhas vao para o começo */
+            align-content: flex-end; /* todas as linhas vão para o final */
+            align-content: center; /* centralizar */
+            align-content: space-around;
+            align-content: space-between;
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container tag nolabel">
+        <div class="tag nolabel">1</div>
+        <div class="tag nolabel">2</div>
+        <div class="tag nolabel big">3</div>
+        <div class="tag nolabel">4</div>
+        <div class="tag nolabel">5</div>
+        <div class="tag nolabel">6</div>
+        <div class="tag nolabel">7</div>
+        <div class="tag nolabel">8</div>
+        <div class="tag nolabel">9</div>
+        <div class="tag nolabel">10</div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

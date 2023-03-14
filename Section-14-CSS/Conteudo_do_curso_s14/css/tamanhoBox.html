@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tamanho Box</title>
+    <style>
+        body {
+            font-size: 45px;
+        }
+
+        div {
+            background-color: blue;
+            width: 100%;
+            height: 300px;
+            padding: 100%;
+            border: solid 20px;
+            box-sizing: content-box; /* box no conteudo - nao considera a borda*/
+            box-sizing: border-box; /* box a partir da borda*/
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        O tamanho do Box é...
+    </div>
+</body>
+</html>

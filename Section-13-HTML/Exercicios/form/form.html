@@ -1,0 +1,31 @@
+<h1>Formulário</h1>
+
+<form action="http://localhost:3003/usuarios" method="post">
+    <input type="text" name="Nome">
+    <input type="password" name="senha">
+    <textarea name="bio" cols="30" rows="10"></textarea>
+</form>
+<div>
+    <input type="radio" name="tipo" value="Professor"> Professor
+    <input type="radio" name="tipo" value="Aluno"> Aluno
+</div>
+<select name="Estado">
+    <option >Selecione</option>
+    <option value="ac">Acre</option>
+    <option value="ba">Bahia</option>
+    <option value="sp">São Paulo</option>
+</select>
+<button>Enviar</button>
+
+<style>
+    input,
+    textarea {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input,
+     [type="radio"] {
+        display: inline;
+    }
+    
+</style>

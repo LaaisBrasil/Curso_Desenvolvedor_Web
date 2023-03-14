@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria RS</title>
+    <style>
+        @font-face {
+                font-family: American Capitan ;
+                src: url(American\ Captain.ttf); 
+            }
+
+        * {
+            margin: 0px;
+            padding: 1px;
+            
+            }
+        
+        body {
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: 100px 1fr;
+            grid-template-rows: 200px 1fr 300px;
+            grid-template-areas: 
+            'menu logo'
+            'menu conteudo'
+            'menu conteudo';
+            background-color: rgb(34, 31, 31);
+        }
+        nav {
+            grid-area: menu;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            
+            
+                        
+        }
+
+        a {
+            display: flex;
+            display: column;
+            align-items: center;
+            justify-content: center;
+            border: solid 2px rgb(255, 0, 0);
+            margin-top: 20px;
+            background-color: red;
+            
+        }
+               
+        header {
+            grid-area: logo;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            grid-area: conteudo;
+        }
+
+        img.menu-ham {
+            height: 80px;
+            width: 80px;
+        }
+
+        .logoRS {
+            width: 300px;
+            height: 100%;
+            display: flex;
+            display: inline;
+            align-items: center;
+            justify-content: center;
+        }
+
+        span{
+            font-family: American Capitan;
+        }
+
+                
+
+    </style>
+</head>
+<body>
+    <header class="logo"> 
+        <img class="logoRS" src="IMAGEMLOGO-removebg-preview.png" alt="logo"> 
+     </header>
+    <nav class="menu">
+        <a href="hamburguer.html"> <img class="menu-ham" src="hamburguer-removebg-preview-removebg-preview.png" alt="hamburguer"></a>
+        <a href="acompanhamento.html"> <img class="menu-ham" src="Acompanhamentos-removebg-preview-removebg-preview.png" alt="acompanhamento"></a>
+        <a href="bebidas.html"> <img class="menu-ham" src="bebida-removebg-preview-removebg-preview.png" alt="bebidas"></a>
+        <a href="sobremesas.html"> <img class="menu-ham" src="sobremesa-removebg-preview-removebg-preview.png" alt="sobremesa"></a>
+    </nav>
+    <section id="conteudo"></section>
+
+<script>
+    document.querySelectorAll ("a").forEach(link => {
+        const conteudo = document.getElementById("conteudo")
+
+        link.onclick = function (e) {
+            e.preventDefault()
+            fetch(link.href)
+               .then(resp => resp.text())
+               .then(html => conteudo.innerHTML= html)
+        }
+               
+    });
+</script>
+</body>
+</html>

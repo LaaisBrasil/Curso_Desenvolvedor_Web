@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /* 
+          Em linhas gerais...
+
+          1. Regras com !important
+          2. Seletores mais especificos 
+          3. Ultima regra processada (empate)
+
+        */
+
+        p {
+            background-color: aquamarine;
+        }
+
+        .observacao {
+            background-color: green;
+            border: dashed 5px rgb(0, 255, 149);  
+            padding: 200px;
+            font-size: 40px;
+        }  /* .observacao e p.observacao obedecem os principios do
+        ultimo codigo digitado é o que será exibido na tela, porém quando nao há
+        um codigo que referencie algo e que seja semelhante nos dois, todos os 
+        codigos acabam sendo lidos pelo computador
+        ex.: 
+            1. entre .observacao e p.observacao a programação "border"
+        aparece apenas em .observacao, então a borda se mantem, mas a cor ("background")
+        que aparece nos dois, prevalece o p.observacao pois foi o ultimp codigo inserido
+            2. Acionando a especificidade "!important a função recebera prioridade*/ 
+
+        p.observacao {
+            padding:  2px;
+            background: linear-gradient(to right, yellow, blue);
+        }
+
+</style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+</body>
+
+</html>
